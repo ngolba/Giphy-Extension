@@ -34,5 +34,9 @@
         "storage",
         "tabs",
         "declarativeContent"
-    ]
+    ],
+
+    "icons": {
+        "128": "sceptic128x128.png"
+    }
 }

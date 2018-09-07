@@ -1,7 +1,7 @@
 {
     "name": "Gif One-click Download",
     "description": "Download On Click",
-    "version": "1.02",
+    "version": "1.03",
     "manifest_version": 2,
 
     "background": {
@@ -37,6 +37,6 @@
     ],
 
     "icons": {
-        "128": "sceptic128x128.png"
+        "128": "images/sceptic128x128.png"
     }
 }

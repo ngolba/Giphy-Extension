@@ -15,6 +15,13 @@ chrome.runtime.sendMessage({
 return;
 }
 
+chrome.storage.sync.get(['randomClassCode'], function (result) {
+    randomClass = result.randomClassCode;
+});
 
-
-document.links.addEventListener('click', downloadFunction);
+document.addEventListener('click', function(event) {
+    if(event.target.classList.contains(randomClass))
+    {
+        downloadFunction();
+    }
+}, false);

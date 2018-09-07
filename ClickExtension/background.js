@@ -14,7 +14,7 @@ function processMessage(request, sender, sendResponse) {
     console.log(request.message);
     console.log(request.urlSent);
     sendResponse({
-        response: 'background response'
+        response: request.urlSent
     });
     chrome.storage.sync.get(['downloadUrlStored'], function (result) {
         chrome.downloads.download({

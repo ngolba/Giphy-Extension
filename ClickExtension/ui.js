@@ -3,13 +3,13 @@ let executed = false;
 
 clickExpand.onclick = function () {
     console.log("clicked");
-    if (!executed) {
+    if (executed === false) {
+        executed = true;
         console.log('clicked');
         chrome.tabs.executeScript({
             file: 'downloader.js'
         })
-    };
+        
+    }
+    }
     
-
-    executed = true;
-}

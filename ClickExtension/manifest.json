@@ -12,7 +12,8 @@
     },
 
     "content_scripts": [{
-        "js": ["ui.js", "downloader.js"]
+        "matches": ["http://*/*", "file:///*"],
+        "js": ["main.js"]
     }],
 
     "browser_action": {

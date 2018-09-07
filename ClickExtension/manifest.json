@@ -6,6 +6,7 @@
 
     "background": {
         "scripts": [
+            "jquery-3.3.1.min.js",
             "background.js"
         ],
         "persistent": false
@@ -13,7 +14,7 @@
 
     "content_scripts": [{
         "matches": ["http://*/*", "file:///*", "https://*/*"],
-        "js": ["main.js"]
+        "js": ["jquery-3.3.1.min.js", "main.js"]
     }],
 
     "browser_action": {

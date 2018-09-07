@@ -10,7 +10,7 @@ clickExpand.onclick = function () {
         chrome.tabs.executeScript({
             file: 'downloader.js'
         })
-        document.getElementById('startListener').innerHTML= 'All links are now downloadable.';
+        document.getElementById('startListener').innerHTML= 'All gifs are now downloadable.';
         
     }
     }

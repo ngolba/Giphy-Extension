@@ -1,4 +1,3 @@
-console.log('main loaded');
 downloadFunction = function() {
     console.log('main');
     chrome.storage.sync.set({

@@ -1,18 +1,20 @@
-let randomClass = Math.random();
-chrome.storage.sync.set({randomClassCode: randomClass});
+if (!document.getElementById('gifCreatorExecuted')){
+    let randomClass = Math.random();
+let links = $("[href$='.gif']");
 
-// let links = document.links;
-let links = $("[href$='.gif']") ; 
-console.log(links);
+chrome.storage.sync.set({
+    randomClassCode: randomClass,
+    downloaderExecuted: true
+});
 
-console.log(links);
 let addClasses = function () {
     for (var i = 0; i < links.length; i++) {
         links[i].addEventListener('click', downloadFunction)
         links[i].classList.add(randomClass)
     }
+    $('body').append('<div id="gifCreatorExecuted">');
     return;
 }
 
 addClasses();
-
+}

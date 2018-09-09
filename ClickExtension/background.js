@@ -1,18 +1,26 @@
-chrome.runtime.onInstalled.addListener(function () {
+let initialize = function() {
     chrome.storage.sync.set({
-        downloadUrlStored: ''
-    }, function () {
-        console.log("made it here");
-    });
+        downloadUrlStored: '',
+        downloaderExecuted: false
+    })
+}
 
+
+chrome.runtime.onStartup.addListener(function () {
+    console.log('startup');
+    initialize();
+
+})
+
+chrome.tabs.onCreated.addListener(function() {
+    console.log('new tab');
+    initialize();
 })
 
 let urlSent = false;
 
 function processMessage(request, sender, sendResponse) {
-    console.log('hey')
-    console.log(request.message);
-    console.log(request.urlSent);
+
     sendResponse({
         response: request.urlSent
     });
